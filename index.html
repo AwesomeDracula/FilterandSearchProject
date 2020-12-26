@@ -1,1 +1,452 @@
-<div>Hello World</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+	<title>Movie theater Filter and Search</title>
+</head>
+<body>
+
+	<!-- header -->
+	<header>
+		<!-- navbar -->
+		<nav class="navbar navbar-expand-lg px-4">
+			<!-- navbar brand -->
+			<a href="#" class="navbar-brand"><img src="img/brandlogo.svg" alt=""></a>
+			<!-- navbar toggler-->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav">
+				<span class="toggler-icon"><i class="fas fa-bars"></i></span>
+			</button>
+			<!-- navbar collapse -->
+			<div class="collapse navbar-collapse" id="myNav">
+				<ul class="navbar-nav mx-auto text-capitalize">
+					<li class="nav-item active">
+						<a href="#" class="nav-link">home</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">movie</a>
+					</li>
+					<li>
+						<a href="#" class="nav-link">hobbies</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">about us</a>
+					</li>
+				</ul>
+				<!-- navbar info -->
+				<div class="nav-info-items d-none d-lg-flex">
+					<!-- single info -->
+					<div class="nav-info align-items-center d-flex justify-content-between mx-lg-5">
+						<span class="info-icon mx-lg-3"><i class="fas fa-phone"></i></span>
+						<p class="mb-0">+84 123 456 789</p>
+					</div>
+					<!-- end of single info -->
+					<!-- single info -->
+					<div id="cart-info" class="cart-info align-items-center d-flex justify-content-between">
+						<span class="cart-icon mx-lg-3"><i class="fas fa-cart-plus"></i></span>
+						<p class="mb-0 text-capitaplize"><span id="item-count">2 </span>items - $<span class="item-total">99</span></p>
+					</div>
+					<!-- end of single info -->
+				</div>
+				<!-- end of navbar info -->
+			</div>
+		</nav>
+		<!-- end of nav -->
+
+		<!-- banner -->
+		<div class="container-fluid">
+			<div class="row max-height justify-content-between align-items-center">
+				<div class="col-10 mx-auto text-center banner">
+					<h1 class="text-capitalize">welcome to <strong class="banner-title">marvel cinematic universe</strong></h1>
+					<a href="#" class="btn banner-link text-uppercase my-2">explore</a>
+				</div>
+			</div>
+		</div>
+		<!-- end of banner -->
+	</header>
+	<!-- end of header -->
+
+	<!-- about us -->
+	<section class="about py-5" id="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-10 mx-auto col-md-6 my-5">
+					<h1 class="text-capitalize">about <strong class="banner-title">us</strong></h1>
+					<p class="my-4 text-muted w-75">Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Dolorum, eius libero. Ipsam nisi qui aut soluta doloremque, laudantium, accusantium repudiandae nesciunt a aliquid quia inventore quaerat? Ab molestiae cum consequuntur?</p>
+					<a href="#" class="btn btn-outline-secondary btn-black text-uppercase">explore</a>
+				</div>
+				<div class="col-10 mx-auto col-md-6 my-5 align-self-center">
+					<div class="about-img">
+						<img src="img/about-img.jpg" alt="" class="img-fluid">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end of about us -->
+
+	<!-- category -->
+	<section class="category py-5" id="category">
+		<div class="container">
+			<!-- section title -->
+			<div class="row">
+				<div class="col-10 mx-auto col-sm-6 text-center">
+					<h1 class="text-capitalize">find your <strong class="banner-title">film</strong></h1>
+				</div>
+			</div>
+			<!-- end of section title -->
+			<!-- filter button -->
+			<div class="row">
+				<div class="col-lg-8 mx-auto d-flex justify-content-around my-2 flex-wrap sortBtn">
+					<a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" data-filter="all">all</a>
+					<a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" data-filter="the-avengers">the avengers</a>
+					<a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" data-filter="iron-man">iron man</a>
+					<a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" data-filter="spider-man">spider man</a>
+					<a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" data-filter="captain-america">captain america</a>
+					<a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" data-filter="guardians-of-galaxy">guardians of galaxy</a>
+					<a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" data-filter="ant-man">ant man</a>
+					<a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" data-filter="doctor-strange">doctor strange</a>
+					<a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" data-filter="black-panther">black panther</a>
+				</div>
+			</div>
+			<!-- end of filter button -->
+			<!-- search box -->
+			<div class="row my-3">
+				<div class="col-10 mx-auto col-md-6">
+					<form>
+						<div class="input-group mb-3">
+							<input type="text" class="form-control" placeholder="Searching..." id="search-item">
+							<div class="input-group-append">
+								<span class="input-group-text search-box" id="search-icon"><i class="fas fa-search"></i></span>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- end of search box -->
+			<!-- categories items -->
+			<div class="row" id="categories-items">
+				<!-- single item -->
+					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item the-avengers" data-item="the-avengers">
+						<div class="card">
+							<div class="img-container">
+								<img src="img/the-avengers-1.jpg" alt="" class="card-img-top category-img">
+								<span class="category-item-icon"><i class="far fa-eye"></i></span>
+							</div>
+							<div class="card-body">
+								<div class="card-text d-flex justify-content-between text-capitalize">
+									<h5 class="category-item-name">the avengers</h5>
+									<h5 class="category-item-view"><strong class="font-weight-bold">1345</strong> views</h5>
+								</div>
+							</div>
+						</div>						
+					</div>
+				<!-- end of single item -->
+
+				<!-- single item -->
+					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item iron-man" data-item="iron-man">
+						<div class="card">
+							<div class="img-container">
+								<img src="img/ironman1.jpg" alt="" class="card-img-top category-img">
+								<span class="category-item-icon"><i class="far fa-eye"></i></span>
+							</div>
+							<div class="card-body">
+								<div class="card-text d-flex justify-content-between text-capitalize">
+									<h5 class="category-item-name">iron man</h5>
+									<h5 class="category-item-view"><strong class="font-weight-bold">1345</strong> views</h5>
+								</div>
+							</div>
+						</div>						
+					</div>
+				<!-- end of single item -->
+
+
+				<!-- single item -->
+					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item spider-man" data-item="spider-man">
+						<div class="card">
+							<div class="img-container">
+								<img src="img/spider1.jpg" alt="" class="card-img-top category-img">
+								<span class="category-item-icon"><i class="far fa-eye"></i></span>
+							</div>
+							<div class="card-body">
+								<div class="card-text d-flex justify-content-between text-capitalize">
+									<h5 class="category-item-name">spider-man</h5>
+									<h5 class="category-item-view"><strong class="font-weight-bold">1345</strong> views</h5>
+								</div>
+							</div>
+						</div>						
+					</div>
+				<!-- end of single item -->
+
+				<!-- single item -->
+					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item doctor-strange" data-item="doctor-strange">
+						<div class="card">
+							<div class="img-container">
+								<img src="img/drstrange.jpg" alt="" class="card-img-top category-img">
+								<span class="category-item-icon"><i class="far fa-eye"></i></span>
+							</div>
+							<div class="card-body">
+								<div class="card-text d-flex justify-content-between text-capitalize">
+									<h5 class="category-item-name">doctor strange</h5>
+									<h5 class="category-item-view"><strong class="font-weight-bold">1345</strong> views</h5>
+								</div>
+							</div>
+						</div>						
+					</div>
+				<!-- end of single item -->
+
+				<!-- single item -->
+					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item captain-america" data-item="captain-america">
+						<div class="card">
+							<div class="img-container">
+								<img src="img/cap1.jpg" alt="" class="card-img-top category-img">
+								<span class="category-item-icon"><i class="far fa-eye"></i></span>
+							</div>
+							<div class="card-body">
+								<div class="card-text d-flex justify-content-between text-capitalize">
+									<h5 class="category-item-name">captain america</h5>
+									<h5 class="category-item-view"><strong class="font-weight-bold">1345</strong> views</h5>
+								</div>
+							</div>
+						</div>						
+					</div>
+				<!-- end of single item -->
+
+				<!-- single item -->
+					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item ant-man" data-item="ant-man">
+						<div class="card">
+							<div class="img-container">
+								<img src="img/ant1.jpg" alt="" class="card-img-top category-img">
+								<span class="category-item-icon"><i class="far fa-eye"></i></span>
+							</div>
+							<div class="card-body">
+								<div class="card-text d-flex justify-content-between text-capitalize">
+									<h5 class="category-item-name">ant man</h5>
+									<h5 class="category-item-view"><strong class="font-weight-bold">1345</strong> views</h5>
+								</div>
+							</div>
+						</div>						
+					</div>
+				<!-- end of single item -->
+
+				<!-- single item -->
+					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item guardians-of-galaxy" data-item="guardians-of-galaxy">
+						<div class="card">
+							<div class="img-container">
+								<img src="img/gog1.jpg" alt="" class="card-img-top category-img">
+								<span class="category-item-icon"><i class="far fa-eye"></i></span>
+							</div>
+							<div class="card-body">
+								<div class="card-text d-flex justify-content-between text-capitalize">
+									<h5 class="category-item-name">guardians of galaxy</h5>
+									<h5 class="category-item-view"><strong class="font-weight-bold">1345</strong> views</h5>
+								</div>
+							</div>
+						</div>						
+					</div>
+				<!-- end of single item -->
+
+				<!-- single item -->
+					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item the-avengers" data-item="the-avengers">
+						<div class="card">
+							<div class="img-container">
+								<img src="img/the-avengers-2.jpg" alt="" class="card-img-top category-img">
+								<span class="category-item-icon"><i class="far fa-eye"></i></span>
+							</div>
+							<div class="card-body">
+								<div class="card-text d-flex justify-content-between text-capitalize">
+									<h5 class="category-item-name">the avengers</h5>
+									<h5 class="category-item-view"><strong class="font-weight-bold">1345</strong> views</h5>
+								</div>
+							</div>
+						</div>						
+					</div>
+				<!-- end of single item -->
+
+				<!-- single item -->
+					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item iron-man" data-item="iron-man">
+						<div class="card">
+							<div class="img-container">
+								<img src="img/ironman2.jpg" alt="" class="card-img-top category-img">
+								<span class="category-item-icon"><i class="far fa-eye"></i></span>
+							</div>
+							<div class="card-body">
+								<div class="card-text d-flex justify-content-between text-capitalize">
+									<h5 class="category-item-name">iron man</h5>
+									<h5 class="category-item-view"><strong class="font-weight-bold">1345</strong> views</h5>
+								</div>
+							</div>
+						</div>						
+					</div>
+				<!-- end of single item -->
+
+				<!-- single item -->
+					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item spider-man" data-item="spider-man">
+						<div class="card">
+							<div class="img-container">
+								<img src="img/spider2.jpg" alt="" class="card-img-top category-img">
+								<span class="category-item-icon"><i class="far fa-eye"></i></span>
+							</div>
+							<div class="card-body">
+								<div class="card-text d-flex justify-content-between text-capitalize">
+									<h5 class="category-item-name">spider man</h5>
+									<h5 class="category-item-view"><strong class="font-weight-bold">1345</strong> views</h5>
+								</div>
+							</div>
+						</div>						
+					</div>
+				<!-- end of single item -->
+
+				<!-- single item -->
+					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item black-panther" data-item="black-panther">
+						<div class="card">
+							<div class="img-container">
+								<img src="img/blackpanther.jpg" alt="" class="card-img-top category-img">
+								<span class="category-item-icon"><i class="far fa-eye"></i></span>
+							</div>
+							<div class="card-body">
+								<div class="card-text d-flex justify-content-between text-capitalize">
+									<h5 class="category-item-name">black panther</h5>
+									<h5 class="category-item-view"><strong class="font-weight-bold">1345</strong> views</h5>
+								</div>
+							</div>
+						</div>						
+					</div>
+				<!-- end of single item -->
+
+				<!-- single item -->
+					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item captain-america" data-item="captain-america">
+						<div class="card">
+							<div class="img-container">
+								<img src="img/cap2.jpg" alt="" class="card-img-top category-img">
+								<span class="category-item-icon"><i class="far fa-eye"></i></span>
+							</div>
+							<div class="card-body">
+								<div class="card-text d-flex justify-content-between text-capitalize">
+									<h5 class="category-item-name">captain america</h5>
+									<h5 class="category-item-view"><strong class="font-weight-bold">1345</strong> views</h5>
+								</div>
+							</div>
+						</div>						
+					</div>
+				<!-- end of single item -->
+
+				<!-- single item -->
+					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item the-avengers" data-item="the-avengers">
+						<div class="card">
+							<div class="img-container">
+								<img src="img/the-avengers-3.jpg" alt="" class="card-img-top category-img">
+								<span class="category-item-icon"><i class="far fa-eye"></i></span>
+							</div>
+							<div class="card-body">
+								<div class="card-text d-flex justify-content-between text-capitalize">
+									<h5 class="category-item-name">the avengers</h5>
+									<h5 class="category-item-view"><strong class="font-weight-bold">1345</strong> views</h5>
+								</div>
+							</div>
+						</div>						
+					</div>
+				<!-- end of single item -->
+
+				<!-- single item -->
+					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item guardians-of-galaxy" data-item="guardians-of-galaxy">
+						<div class="card">
+							<div class="img-container">
+								<img src="img/gog2.jpg" alt="" class="card-img-top category-img">
+								<span class="category-item-icon"><i class="far fa-eye"></i></span>
+							</div>
+							<div class="card-body">
+								<div class="card-text d-flex justify-content-between text-capitalize">
+									<h5 class="category-item-name">guardians of galaxy</h5>
+									<h5 class="category-item-view"><strong class="font-weight-bold">1345</strong> views</h5>
+								</div>
+							</div>
+						</div>						
+					</div>
+				<!-- end of single item -->
+
+				<!-- single item -->
+					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item iron-man" data-item="iron-man">
+						<div class="card">
+							<div class="img-container">
+								<img src="img/ironman3.jpg" alt="" class="card-img-top category-img">
+								<span class="category-item-icon"><i class="far fa-eye"></i></span>
+							</div>
+							<div class="card-body">
+								<div class="card-text d-flex justify-content-between text-capitalize">
+									<h5 class="category-item-name">iron man</h5>
+									<h5 class="category-item-view"><strong class="font-weight-bold">1345</strong> views</h5>
+								</div>
+							</div>
+						</div>						
+					</div>
+				<!-- end of single item -->
+
+				<!-- single item -->
+					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item ant-man" data-item="ant-man">
+						<div class="card">
+							<div class="img-container">
+								<img src="img/ant2.jpg" alt="" class="card-img-top category-img">
+								<span class="category-item-icon"><i class="far fa-eye"></i></span>
+							</div>
+							<div class="card-body">
+								<div class="card-text d-flex justify-content-between text-capitalize">
+									<h5 class="category-item-name">ant man</h5>
+									<h5 class="category-item-view"><strong class="font-weight-bold">1345</strong> views</h5>
+								</div>
+							</div>
+						</div>						
+					</div>
+				<!-- end of single item -->
+
+				<!-- single item -->
+					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item spider-man" data-item="spider-man">
+						<div class="card">
+							<div class="img-container">
+								<img src="img/spider3.jpg" alt="" class="card-img-top category-img">
+								<span class="category-item-icon"><i class="far fa-eye"></i></span>
+							</div>
+							<div class="card-body">
+								<div class="card-text d-flex justify-content-between text-capitalize">
+									<h5 class="category-item-name">spider man</h5>
+									<h5 class="category-item-view"><strong class="font-weight-bold">1345</strong> views</h5>
+								</div>
+							</div>
+						</div>						
+					</div>
+				<!-- end of single item -->
+
+				<!-- single item -->
+					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item captain-america" data-item="captain-america">
+						<div class="card">
+							<div class="img-container">
+								<img src="img/cap3.jpg" alt="" class="card-img-top category-img">
+								<span class="category-item-icon"><i class="far fa-eye"></i></span>
+							</div>
+							<div class="card-body">
+								<div class="card-text d-flex justify-content-between text-capitalize">
+									<h5 class="category-item-name">captain america</h5>
+									<h5 class="category-item-view"><strong class="font-weight-bold">1345</strong> views</h5>
+								</div>
+							</div>
+						</div>						
+					</div>
+				<!-- end of single item -->
+			</div>
+			<!-- end of categories items -->
+		</div>
+	</section>
+	<!-- end of category -->
+
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

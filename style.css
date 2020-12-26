@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
+
+:root {
+	--mainWhite: #fff;
+	--mainBlack: #000;
+	--mainOrange: #e04107;
+	--mainYellow: rgb(249,228,148);
+	--mainGrey: rgb(238,238,238);
+	--whiteTrans: rgba(204,229,230,0.5);
+}
+
+body{
+	font-family: "Indie Flower";
+	background: var(--mainWhite);
+	color: var(--mainBlack);
+}
+
+/*nav links*/
+.navbar-brand img{
+	width: 100px;
+	height: 50px;
+}
+.navbar-toggler{
+	outline: none !important;
+}
+.toggler-icon{
+	font-size: 2.5rem;
+	color: var(--mainOrange);
+}
+.nav-link{
+	color: var(--mainOrange);
+	font-size: 1.5rem;
+	transition: all .5s ease-in-out;
+}
+.nav-link:hover{
+	color: var(--mainBlack);
+}
+/*end of nav links*/
+
+/*info icons*/
+.cart-icon{
+	color: var(--mainBlack);
+	cursor: pointer;
+}
+.cart-info{
+	border: 0.1rem solid var(--mainBlack);
+	color: var(--mainBlack);
+	border-radius: 0.5rem;
+	padding: 0.4rem 0.6rem;
+	cursor: pointer;
+}
+.cart-info:hover{
+	background: var(--mainOrange);
+	border-color: var(--mainOrange);
+	color: var(--mainWhite);
+}
+.cart-info:hover .cart-icon{
+	color: var(--mainWhite);
+}
+/* end of info icons*/
+
+/* banner */
+.max-height{
+	min-height:calc(100vh - 76px);
+	background: linear-gradient(var(--whiteTrans),var(--whiteTrans)) ,url(img/bg.jpg) center/cover fixed no-repeat;
+	position: relative;
+}
+.banner{
+	color: var(--mainBlack);
+	margin-top: 4rem;
+}
+.banner-title{
+	color: var(--mainOrange);
+	font-size: 4rem;
+}
+.banner-link{
+	font-size: 1.5rem;
+	color: var(--mainBlack);
+	border: 0.2rem solid var(--mainOrange);
+}
+.banner-link:hover{
+	background: var(--mainBlack);
+	color: var(--mainOrange);
+}
+/* end of banner */
+
+/* about us */
+.about-img{
+	position: relative;
+}
+.about-img:before{
+	content: "";
+	position: absolute;
+	top: -1.5rem;
+	left: -1.7rem;
+	width: 100%;
+	height: 100%;
+	outline: 0.5rem solid var(--mainOrange);
+	z-index: -1;
+	transition: all 1s ease-in-out;
+}
+.about-img:hover:before{
+	top: 0;
+	left: 0;
+}
+/* end of about us*/
+
+/* filter button */
+.btn-black{
+	color: var(--mainBlack);
+	border-color: var(--mainBlack);
+}
+.btn-black:hover{
+	color: var(--mainOrange);
+	background: var(--mainBlack);
+}
+/* end of filter button*/
+
+/* search box*/
+.search-box{
+	background: var(--mainOrange);
+	color: var(--mainBlack);
+}
+/* end of search box */
+
+/* category */
+.category{
+	background: var(--mainGrey);
+}
+.img-container{
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
+.category-img{
+	transition: all 1s ease-in-out;
+}
+.img-container:hover .category-img{
+	transform: scale(1.1);
+}
+.category-item-icon{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 0.5rem;
+	background: var(--mainYellow);
+	border-top-left-radius: 1rem;
+	transition: all 1s ease-in-out;
+	transform: translate(100%,100%);
+}
+.img-container:hover .category-item-icon{
+	transform: translate(0,0);
+}
+.category-item-icon:hover{
+	color: var(--mainOrange);
+}
+.category-item-view{
+	color: var(--mainOrange);
+}
+/* end of category */
