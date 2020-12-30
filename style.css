@@ -7,6 +7,7 @@
 	--mainYellow: rgb(249,228,148);
 	--mainGrey: rgb(238,238,238);
 	--whiteTrans: rgba(204,229,230,0.5);
+	scroll-behavior: smooth;
 }
 
 body{
@@ -77,6 +78,7 @@ body{
 	font-size: 1.5rem;
 	color: var(--mainBlack);
 	border: 0.2rem solid var(--mainOrange);
+	transition: all 1s ease-in-out;
 }
 .banner-link:hover{
 	background: var(--mainBlack);
@@ -158,3 +160,15 @@ body{
 	color: var(--mainOrange);
 }
 /* end of category */
+
+/* modal */
+.show{
+	display: block;
+}
+#temp-src{
+	max-width: 100%;
+}
+.modal-body{
+	text-align: center;
+}
+/* end of modal */

@@ -1,6 +1,6 @@
 // filter button
 (function(){
-	const buttons = document.querySelectorAll(".btn");
+	const buttons = document.querySelectorAll(".filter-btn");
 	const items = document.querySelectorAll(".category-item");
 
 	buttons.forEach((button) => {
@@ -32,3 +32,18 @@
 		})
 	})
 })();
+
+(function(){
+	const imgs = document.querySelectorAll(".category-img");
+	const modal = document.querySelector("#imageModal");
+	const tmpSrc = document.querySelector("#temp-src");
+	imgs.forEach( function(img) {
+		img.addEventListener("click", function(e){
+			let src = e.target.src;
+			var bg = document.querySelector(".modal-body");
+			tmpSrc.src = src;
+			// bg.style.backgroundImage = `url(${src})`;
+			modal.classList.add("show");
+		})
+	});
+}());

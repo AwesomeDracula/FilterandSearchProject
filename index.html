@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 	<title>Movie theater Filter and Search</title>
@@ -62,7 +62,7 @@
 			<div class="row max-height justify-content-between align-items-center">
 				<div class="col-10 mx-auto text-center banner">
 					<h1 class="text-capitalize">welcome to <strong class="banner-title">marvel cinematic universe</strong></h1>
-					<a href="#" class="btn banner-link text-uppercase my-2">explore</a>
+					<a href="#category" class="btn banner-link text-uppercase my-2">explore</a>
 				</div>
 			</div>
 		</div>
@@ -134,7 +134,7 @@
 					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item the-avengers" data-item="the-avengers">
 						<div class="card">
 							<div class="img-container">
-								<img src="img/the-avengers-1.jpg" alt="" class="card-img-top category-img">
+								<img src="img/the-avengers-1.jpg" alt="" class="card-img-top category-img" data-toggle="modal" data-target="#imageModal">
 								<span class="category-item-icon"><i class="far fa-eye"></i></span>
 							</div>
 							<div class="card-body">
@@ -151,7 +151,7 @@
 					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item iron-man" data-item="iron-man">
 						<div class="card">
 							<div class="img-container">
-								<img src="img/ironman1.jpg" alt="" class="card-img-top category-img">
+								<img src="img/ironman1.jpg" alt="" class="card-img-top category-img" data-toggle="modal" data-target="#imageModal">
 								<span class="category-item-icon"><i class="far fa-eye"></i></span>
 							</div>
 							<div class="card-body">
@@ -169,7 +169,7 @@
 					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item spider-man" data-item="spider-man">
 						<div class="card">
 							<div class="img-container">
-								<img src="img/spider1.jpg" alt="" class="card-img-top category-img">
+								<img src="img/spider1.jpg" alt="" class="card-img-top category-img" data-toggle="modal" data-target="#imageModal">
 								<span class="category-item-icon"><i class="far fa-eye"></i></span>
 							</div>
 							<div class="card-body">
@@ -186,7 +186,7 @@
 					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item doctor-strange" data-item="doctor-strange">
 						<div class="card">
 							<div class="img-container">
-								<img src="img/drstrange.jpg" alt="" class="card-img-top category-img">
+								<img src="img/drstrange.jpg" alt="" class="card-img-top category-img" data-toggle="modal" data-target="#imageModal">
 								<span class="category-item-icon"><i class="far fa-eye"></i></span>
 							</div>
 							<div class="card-body">
@@ -203,7 +203,7 @@
 					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item captain-america" data-item="captain-america">
 						<div class="card">
 							<div class="img-container">
-								<img src="img/cap1.jpg" alt="" class="card-img-top category-img">
+								<img src="img/cap1.jpg" alt="" class="card-img-top category-img" data-toggle="modal" data-target="#imageModal">
 								<span class="category-item-icon"><i class="far fa-eye"></i></span>
 							</div>
 							<div class="card-body">
@@ -220,7 +220,7 @@
 					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item ant-man" data-item="ant-man">
 						<div class="card">
 							<div class="img-container">
-								<img src="img/ant1.jpg" alt="" class="card-img-top category-img">
+								<img src="img/ant1.jpg" alt="" class="card-img-top category-img" data-toggle="modal" data-target="#imageModal">
 								<span class="category-item-icon"><i class="far fa-eye"></i></span>
 							</div>
 							<div class="card-body">
@@ -237,7 +237,7 @@
 					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item guardians-of-galaxy" data-item="guardians-of-galaxy">
 						<div class="card">
 							<div class="img-container">
-								<img src="img/gog1.jpg" alt="" class="card-img-top category-img">
+								<img src="img/gog1.jpg" alt="" class="card-img-top category-img" data-toggle="modal" data-target="#imageModal">
 								<span class="category-item-icon"><i class="far fa-eye"></i></span>
 							</div>
 							<div class="card-body">
@@ -254,7 +254,7 @@
 					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item the-avengers" data-item="the-avengers">
 						<div class="card">
 							<div class="img-container">
-								<img src="img/the-avengers-2.jpg" alt="" class="card-img-top category-img">
+								<img src="img/the-avengers-2.jpg" alt="" class="card-img-top category-img" data-toggle="modal" data-target="#imageModal">
 								<span class="category-item-icon"><i class="far fa-eye"></i></span>
 							</div>
 							<div class="card-body">
@@ -271,7 +271,7 @@
 					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item iron-man" data-item="iron-man">
 						<div class="card">
 							<div class="img-container">
-								<img src="img/ironman2.jpg" alt="" class="card-img-top category-img">
+								<img src="img/ironman2.jpg" alt="" class="card-img-top category-img" data-toggle="modal" data-target="#imageModal">
 								<span class="category-item-icon"><i class="far fa-eye"></i></span>
 							</div>
 							<div class="card-body">
@@ -288,7 +288,7 @@
 					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item spider-man" data-item="spider-man">
 						<div class="card">
 							<div class="img-container">
-								<img src="img/spider2.jpg" alt="" class="card-img-top category-img">
+								<img src="img/spider2.jpg" alt="" class="card-img-top category-img" data-toggle="modal" data-target="#imageModal">
 								<span class="category-item-icon"><i class="far fa-eye"></i></span>
 							</div>
 							<div class="card-body">
@@ -305,7 +305,7 @@
 					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item black-panther" data-item="black-panther">
 						<div class="card">
 							<div class="img-container">
-								<img src="img/blackpanther.jpg" alt="" class="card-img-top category-img">
+								<img src="img/blackpanther.jpg" alt="" class="card-img-top category-img" data-toggle="modal" data-target="#imageModal">
 								<span class="category-item-icon"><i class="far fa-eye"></i></span>
 							</div>
 							<div class="card-body">
@@ -322,7 +322,7 @@
 					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item captain-america" data-item="captain-america">
 						<div class="card">
 							<div class="img-container">
-								<img src="img/cap2.jpg" alt="" class="card-img-top category-img">
+								<img src="img/cap2.jpg" alt="" class="card-img-top category-img" data-toggle="modal" data-target="#imageModal">
 								<span class="category-item-icon"><i class="far fa-eye"></i></span>
 							</div>
 							<div class="card-body">
@@ -339,7 +339,7 @@
 					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item the-avengers" data-item="the-avengers">
 						<div class="card">
 							<div class="img-container">
-								<img src="img/the-avengers-3.jpg" alt="" class="card-img-top category-img">
+								<img src="img/the-avengers-3.jpg" alt="" class="card-img-top category-img" data-toggle="modal" data-target="#imageModal">
 								<span class="category-item-icon"><i class="far fa-eye"></i></span>
 							</div>
 							<div class="card-body">
@@ -356,7 +356,7 @@
 					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item guardians-of-galaxy" data-item="guardians-of-galaxy">
 						<div class="card">
 							<div class="img-container">
-								<img src="img/gog2.jpg" alt="" class="card-img-top category-img">
+								<img src="img/gog2.jpg" alt="" class="card-img-top category-img" data-toggle="modal" data-target="#imageModal">
 								<span class="category-item-icon"><i class="far fa-eye"></i></span>
 							</div>
 							<div class="card-body">
@@ -373,7 +373,7 @@
 					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item iron-man" data-item="iron-man">
 						<div class="card">
 							<div class="img-container">
-								<img src="img/ironman3.jpg" alt="" class="card-img-top category-img">
+								<img src="img/ironman3.jpg" alt="" class="card-img-top category-img" data-toggle="modal" data-target="#imageModal">
 								<span class="category-item-icon"><i class="far fa-eye"></i></span>
 							</div>
 							<div class="card-body">
@@ -390,7 +390,7 @@
 					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item ant-man" data-item="ant-man">
 						<div class="card">
 							<div class="img-container">
-								<img src="img/ant2.jpg" alt="" class="card-img-top category-img">
+								<img src="img/ant2.jpg" alt="" class="card-img-top category-img" data-toggle="modal" data-target="#imageModal">
 								<span class="category-item-icon"><i class="far fa-eye"></i></span>
 							</div>
 							<div class="card-body">
@@ -407,7 +407,7 @@
 					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item spider-man" data-item="spider-man">
 						<div class="card">
 							<div class="img-container">
-								<img src="img/spider3.jpg" alt="" class="card-img-top category-img">
+								<img src="img/spider3.jpg" alt="" class="card-img-top category-img" data-toggle="modal" data-target="#imageModal">
 								<span class="category-item-icon"><i class="far fa-eye"></i></span>
 							</div>
 							<div class="card-body">
@@ -424,7 +424,7 @@
 					<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 category-item captain-america" data-item="captain-america">
 						<div class="card">
 							<div class="img-container">
-								<img src="img/cap3.jpg" alt="" class="card-img-top category-img">
+								<img src="img/cap3.jpg" alt="" class="card-img-top category-img" data-toggle="modal" data-target="#imageModal">
 								<span class="category-item-icon"><i class="far fa-eye"></i></span>
 							</div>
 							<div class="card-body">
@@ -441,6 +441,32 @@
 		</div>
 	</section>
 	<!-- end of category -->
+
+		<!-- Button trigger modal -->
+	<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+	  Launch demo modal
+	</button> -->
+
+	<!-- Modal -->
+	<div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="modal-label"></h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	   		<!-- Modal content -->
+	   		<img src="" alt="" id="temp-src">
+	      </div>
+	      <!-- <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	      </div> -->
+	    </div>
+	  </div>
+	</div>
 
 	<!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
