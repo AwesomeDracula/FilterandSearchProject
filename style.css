@@ -6,7 +6,7 @@
 	--mainOrange: #e04107;
 	--mainYellow: rgb(249,228,148);
 	--mainGrey: rgb(238,238,238);
-	--whiteTrans: rgba(204,229,230,0.5);
+	--whiteTrans: rgba(0,0,0,0.5);
 	scroll-behavior: smooth;
 }
 
@@ -61,6 +61,9 @@ body{
 /* end of info icons*/
 
 /* banner */
+.text-white{
+	color: white !important;
+}
 .max-height{
 	min-height:calc(100vh - 76px);
 	background: linear-gradient(var(--whiteTrans),var(--whiteTrans)) ,url(img/bg.jpg) center/cover fixed no-repeat;
@@ -82,9 +85,51 @@ body{
 }
 .banner-link:hover{
 	background: var(--mainBlack);
-	color: var(--mainOrange);
+	color: var(--mainOrange) !important;
 }
 /* end of banner */
+
+/* cart */
+.cart {
+  position: absolute;
+  min-height: 15rem;
+  max-height: 20rem;
+  background: var(--mainWhite);
+  top: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.7);
+  width: 0;
+  overflow-y: scroll;
+}
+.img-cart{
+	width: 4rem;
+	height: 3rem;
+}
+.show-cart{
+	width: 20rem;
+	padding: 1rem 1.5rem;
+}
+.cart-title{
+	font-size: 2rem;
+	color: var(--mainOrange);
+}
+.item-text{
+	max-height: 3rem;
+	line-height: 3rem;
+}
+.cart-item-remove{
+	cursor: pointer;
+	height: 16px;
+	line-height: 42px;
+	border: none;
+	background: transparent;
+	transition: all 0.5s ease-in-out;
+}
+.cart-item-remove:hover{
+	color: var(--mainOrange);
+}
+/* end of cart */
 
 /* about us */
 .about-img{
