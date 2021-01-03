@@ -155,15 +155,19 @@ function setLocalStorage(watchlist){
 	})
 })();
 
+
+// modal
 (function(){
 	const imgs = document.querySelectorAll(".category-img");
 	const modal = document.querySelector("#imageModal");
 	const tmpSrc = document.querySelector("#temp-src");
+	const modalTitle = document.getElementById("modal-label");
 	imgs.forEach( function(img) {
 		img.addEventListener("click", function(e){
 			let src = e.target.src;
-			var bg = document.querySelector(".modal-body");
 			tmpSrc.src = src;
+			let body = e.target.parentElement.nextElementSibling.querySelector(".category-item-name").textContent;
+			modalTitle.innerHTML = body;
 			// bg.style.backgroundImage = `url(${src})`;
 			modal.classList.add("show");
 		})
